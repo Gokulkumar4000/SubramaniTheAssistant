@@ -1,0 +1,15 @@
+import sqlite3
+con=sqlite3.connect("subramani.db")
+cursor=con.cursor()
+query="CREATE TABLE IF NOT EXISTS sys_command(id integer primary key,name VARCHAR(100),path VARCHAR(1000))"
+cursor.execute(query)
+# query="INSERT INTO sys_command VALUES(null,'','')"
+# cursor.execute(query)
+# con.commit()
+# query="CREATE TABLE IF NOT EXISTS web_command(id integer primary key,name VARCHAR(100),path VARCHAR(1000))"
+# cursor.execute(query)
+# query="INSERT INTO web_command VALUES(null, 'Microsoft', 'https://www.microsoft.com'), (null, 'Apple', 'https://www.apple.com'), (null, 'Adobe', 'https://www.adobe.com'), (null, 'Slack', 'https://slack.com'), (null, 'Dropbox', 'https://www.dropbox.com'), (null, 'Evernote', 'https://www.evernote.com'), (null, 'Mailchimp', 'https://mailchimp.com'), (null, 'Zoom', 'https://zoom.us'), (null, 'Trello', 'https://trello.com'), (null, 'Asana', 'https://asana.com'), (null, 'GitLab', 'https://about.gitlab.com'), (null, 'Bitbucket', 'https://bitbucket.org'), (null, 'Jira', 'https://www.atlassian.com/software/jira'), (null, 'Atlassian', 'https://www.atlassian.com'), (null, 'Basecamp', 'https://basecamp.com'), (null, 'Notion', 'https://www.notion.so'), (null, 'Quora', 'https://www.quora.com'), (null, 'Medium', 'https://medium.com'), (null, 'Tumblr', 'https://www.tumblr.com'), (null, 'Flickr', 'https://www.flickr.com'), (null, 'Behance', 'https://www.behance.net'), (null, 'Dribbble', 'https://dribbble.com'), (null, '500px', 'https://500px.com'), (null, 'DeviantArt', 'https://www.deviantart.com'), (null, 'Redbubble', 'https://www.redbubble.com'), (null, 'Etsy', 'https://www.etsy.com'), (null, 'Shopify', 'https://www.shopify.com'), (null, 'Magento', 'https://magento.com'), (null, 'WooCommerce', 'https://woocommerce.com'), (null, 'BigCommerce', 'https://www.bigcommerce.com'), (null, 'Squarespace', 'https://www.squarespace.com'), (null, 'Wix', 'https://www.wix.com'), (null, 'Weebly', 'https://www.weebly.com'), (null, 'WordPress.com', 'https://www.wordpress.com'), (null, 'Blogger', 'https://www.blogger.com'), (null, 'Drupal', 'https://www.drupal.org'), (null, 'Joomla', 'https://www.joomla.org'), (null, 'Hootsuite', 'https://hootsuite.com'), (null, 'Buffer', 'https://buffer.com'), (null, 'Sprout Social', 'https://sproutsocial.com'), (null, 'SocialBee', 'https://socialbee.io'), (null, 'Mailerlite', 'https://www.mailerlite.com'), (null, 'AWeber', 'https://www.aweber.com'), (null, 'Constant Contact', 'https://www.constantcontact.com'), (null, 'GetResponse', 'https://www.getresponse.com'), (null, 'Sendinblue', 'https://www.sendinblue.com'), (null, 'Campaign Monitor', 'https://www.campaignmonitor.com'), (null, 'HubSpot', 'https://www.hubspot.com'), (null, 'Pipedrive', 'https://www.pipedrive.com'), (null, 'Salesforce', 'https://www.salesforce.com'), (null, 'Zoho CRM', 'https://www.zoho.com/crm/'), (null, 'Freshsales', 'https://freshsales.io'), (null, 'Insightly', 'https://www.insightly.com')"
+# cursor.execute(query)
+query="UPDATE web_command SET name = LOWER(name)"
+cursor.execute(query)
+con.commit()
